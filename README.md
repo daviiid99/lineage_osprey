@@ -52,7 +52,7 @@ OR, for those with limited bandwidth/storage:
 
 Apply required repopicks:
 
-        curk https://raw.githubusercontent.com/daviiid99/lineage_osprey/lineage-19.0/repopick.sh  > repopick.sh
+        curl https://raw.githubusercontent.com/daviiid99/lineage_osprey/lineage-19.0/repopick.sh  > repopick.sh
 	sh repopick.sh
 	
 Apply any required patches:
