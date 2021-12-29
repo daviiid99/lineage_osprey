@@ -39,9 +39,8 @@ Initialize your local repository using the LineageOS trees, use a command like t
 
 Now create a local_manifests directory
 
-    mkdir .repo/local_manifests
-
-Copy my local manifest 'osprey.xml' to the 'local_manifests' directory.
+	mkdir -p .repo/local_manifests
+	curl https://raw.githubusercontent.com/Galaxy-J5-Unofficial-LineageOS/Manifest/main/LOS-19.0-Permissive-Manifest.xml > .repo/local_manifests/j5.xml
 
 Then to sync up:
 
@@ -53,12 +52,15 @@ OR, for those with limited bandwidth/storage:
 
 Apply required repopicks:
 
-    Copy the repopick.sh script from this repo to the root of your build folder. Then run the repopick.sh script to apply.	
-
+        curk https://raw.githubusercontent.com/daviiid99/lineage_osprey/lineage-19.0/repopick.sh  > repopick.sh
+	sh repopick.sh
+	
 Apply any required patches:
 
-    Copy patch.sh and the .patch files from this repo to the root of your build folder. Then run the patch.sh script to apply.	
-
+	curl https://raw.githubusercontent.com/daviiid99/lineage_osprey/lineage-19.0/patch.sh > patch.sh
+	curl https://raw.githubusercontent.com/daviiid99/lineage_osprey/lineage-19.0/0001-TEMP-Disable-ADB-authentication.patch > 0001-TEMP-Disable-ADB-authentication.patch
+	curl https://raw.githubusercontent.com/daviiid99/lineage_osprey/lineage-19.0/0001-launcher-Add-support-for-themed-icons.patch > 0001-launcher-Add-support-for-themed-icons.patch
+	curl https://github.com/daviiid99/lineage_osprey/raw/lineage-19.0/0002-Launcher3-Import-more-themed-icons.patch > 0002-Launcher3-Import-more-themed-icons.patch
 
 Now start the build...
 
@@ -68,7 +70,7 @@ $
 # ...and run to prepare our devices list
 $ . build/envsetup.sh
 # ... now run
-$ brunch osprey
+$ brunch j5nlte
 ```
 
 Notes
