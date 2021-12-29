@@ -58,9 +58,11 @@ Apply any required patches:
 	curl https://raw.githubusercontent.com/daviiid99/lineage_osprey/lineage-19.0/patch.sh > patch.sh
 	curl https://raw.githubusercontent.com/daviiid99/lineage_osprey/lineage-19.0/0001-TEMP-Disable-ADB-authentication.patch > 0001-TEMP-Disable-ADB-authentication.patch
 	curl https://raw.githubusercontent.com/daviiid99/lineage_osprey/lineage-19.0/0001-launcher-Add-support-for-themed-icons.patch > 0001-launcher-Add-support-for-themed-icons.patch
-	curl https://github.com/daviiid99/lineage_osprey/raw/lineage-19.0/0002-Launcher3-Import-more-themed-icons.patch > 0002-Launcher3-Import-more-themed-icons.patch
-	chmod +x patch.sh
-	./patch.sh
+	curl https://raw.githubusercontent.com/daviiid99/lineage_osprey/lineage-19.0/0002-Launcher3-Import-more-themed-icons.patch > 0002-Launcher3-Import-more-themed-icons.patch
+	 patch -d vendor/lineage -p1 < 0001-TEMP-Disable-ADB-authentication.patch
+	 patch -d packages/apps/Trebuchet -p1 < 0001-launcher-Add-support-for-themed-icons.patch
+	 patch -d packages/apps/Trebuchet -p1 < 0002-Launcher3-Import-more-themed-icons.patch
+	 
 
 Now start the build...
 
