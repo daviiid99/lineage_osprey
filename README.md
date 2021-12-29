@@ -61,6 +61,7 @@ Apply any required patches:
 	curl https://raw.githubusercontent.com/daviiid99/lineage_osprey/lineage-19.0/0001-TEMP-Disable-ADB-authentication.patch > 0001-TEMP-Disable-ADB-authentication.patch
 	curl https://raw.githubusercontent.com/daviiid99/lineage_osprey/lineage-19.0/0001-launcher-Add-support-for-themed-icons.patch > 0001-launcher-Add-support-for-themed-icons.patch
 	curl https://github.com/daviiid99/lineage_osprey/raw/lineage-19.0/0002-Launcher3-Import-more-themed-icons.patch > 0002-Launcher3-Import-more-themed-icons.patch
+	sh patch.sh
 
 Now start the build...
 
